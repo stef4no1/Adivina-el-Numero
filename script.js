@@ -13,9 +13,9 @@ document.querySelector('.check').addEventListener('click', function () {
     console.log(guess, typeof guess);
 
 if (!guess) {
-    displayMessage('⛔️ No number!');
+    displayMessage('⛔️ Ingresa un número!');
     } else if (guess === secretNumber) {
-        displayMessage('🎉 Correct Number!');
+        displayMessage('🎉 Número correcto!');
         document.querySelector('.number').textContent = secretNumber;
         document.querySelector('body').style.backgroundColor = '#60b347';
         document.querySelector('.number').style.width = '30rem';
@@ -26,11 +26,11 @@ if (!guess) {
     }
     } else if (guess !== secretNumber) {
         if (score > 1) {
-        displayMessage(guess > secretNumber ? '📈 Too high!' : '📉 Too low!');
+        displayMessage(guess > secretNumber ? '📈 Muy alto!' : '📉 Muy bajo!');
         score--;
         document.querySelector('.score').textContent = score;
     } else {
-        displayMessage('💥 You lost the game!');
+        displayMessage('💥 Perdiste el juego!');
         document.querySelector('.score').textContent = 0;
     }
     }
